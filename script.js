@@ -82,7 +82,11 @@ function previewCard() {
 /* download kartu */
 
 function downloadCard() {
+
+  window.open("https://direct-link.net/1314520/uLLB9w3AhkuM", "_blank");
+
   html2canvas(document.getElementById("card")).then((canvas) => {
+
     const link = document.createElement("a");
 
     link.download = "kartu.png";
@@ -90,11 +94,9 @@ function downloadCard() {
     link.href = canvas.toDataURL();
 
     link.click();
+
   });
 
-  /* redirect linkvertise */
-
-  setTimeout(() => {
-    window.open("LINKVERTISE_KAMU", "_blank");
-  }, 1000);
 }
+
+
