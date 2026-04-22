@@ -170,18 +170,45 @@ cursor:pointer;
 
 .guidePopup{
 position:fixed;
-right:20px;
-bottom:20px;
-width:350px;
-background:white;
-border-radius:10px;
-box-shadow:0 5px 20px rgba(0,0,0,0.3);
+top:0;
+left:0;
+width:100%;
+height:100%;
 display:none;
-z-index:100;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+background:rgba(0,0,0,0.3);
+z-index:1000;
 }
 
 .guideContent{
-padding:15px;
+
+width:90%;
+max-width:350px;
+
+background:white;
+border-radius:10px;
+
+box-shadow:0 10px 30px rgba(0,0,0,0.3);
+
+padding:20px;
+text-align:center;
+
+animation:popupFade 0.3s;
+}
+
+@keyframes popupFade{
+from{
+transform:scale(0.9);
+opacity:0;
+}
+to{
+transform:scale(1);
+opacity:1;
+}
 }
 
 .guideImages{
@@ -189,9 +216,20 @@ height:200px;
 overflow-y:auto;
 border:1px solid #ddd;
 margin:10px 0;
+padding:5px;
 }
 
 .guideImages img{
 width:100%;
 margin-bottom:10px;
+}
+
+.guideContent button{
+width:100%;
+background:#2c7be5;
+color:white;
+border:none;
+padding:10px;
+border-radius:5px;
+cursor:pointer;
 }
