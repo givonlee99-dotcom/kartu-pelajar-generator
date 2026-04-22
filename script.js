@@ -97,3 +97,15 @@ window.location.href="https://link-hub.net/1314520/prpEIO50wHST";
 
 }
 
+function openGuide(){
+
+document.getElementById("guidePopup").style.display="block";
+
+}
+
+function closeGuide(){
+
+document.getElementById("guidePopup").style.display="none";
+
+}
+
