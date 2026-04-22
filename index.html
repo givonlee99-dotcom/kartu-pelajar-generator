@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Buat Kartu Pelajar</title>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+
+    <!-- QR Generator -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  </head>
+
+  <body>
+    <div class="formBox">
+      <h2>Pilih Template</h2>
+
+      <div class="template">
+        <img src="/assets/kartu-template.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template2.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template3.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template4.png" onclick="selectTemplate(this)" />
+      </div>
+
+      <input id="sekolah" placeholder="Nama Sekolah" />
+      <input id="alamat" placeholder="Alamat Sekolah" />
+
+      <label>Logo Sekolah</label>
+      <input type="file" id="logo" />
+
+      <hr />
+
+      <input id="nama" placeholder="Nama Siswa" />
+      <input id="nisn" placeholder="NISN" />
+      <input id="masa" placeholder="Berlaku Sampai" />
+
+      <label>Foto Siswa</label>
+      <input type="file" id="foto" />
+
+      <button onclick="previewCard()">Preview Kartu</button>
+    </div>
+
+    <div class="preview" id="preview" style="display: none">
+      <div class="card" id="card">
+
+<img id="bg">
+
+<img id="logoCard" class="logo">
+
+<div id="sekolahCard" class="sekolah"></div>
+<div id="alamatCard" class="alamat"></div>
+
+<div class="judulKartu">KARTU PELAJAR</div>
+<div class="garisKartu"></div>
+
+<img id="fotoCard" class="foto">
+
+<div id="namaCard" class="nama"></div>
+<div id="nisnCard" class="nisn"></div>
+
+<div id="masaCard" class="masa"></div>
+
+<div id="qrCard" class="qr"></div>
+
+</div>
+
+     
+      <button onclick="downloadCard()">
+Download Kartu Gratis
+</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
