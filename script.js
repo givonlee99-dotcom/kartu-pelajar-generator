@@ -81,22 +81,19 @@ function previewCard() {
 
 /* download kartu */
 
-function downloadCard() {
+function downloadCard(){
 
-  window.open("https://direct-link.net/1314520/uLLB9w3AhkuM", "_blank");
+html2canvas(document.getElementById("card")).then(canvas=>{
 
-  html2canvas(document.getElementById("card")).then((canvas) => {
+const image = canvas.toDataURL("image/png");
 
-    const link = document.createElement("a");
+/* simpan di browser */
+localStorage.setItem("kartuPelajar", image);
 
-    link.download = "kartu.png";
+/* redirect ke linkvertise */
+window.location.href="https://direct-link.net/1314520/uLLB9w3AhkuM";
 
-    link.href = canvas.toDataURL();
-
-    link.click();
-
-  });
+});
 
 }
-
 
