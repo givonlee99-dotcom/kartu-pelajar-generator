@@ -38,9 +38,15 @@
       <label>Foto Siswa</label>
       <input type="file" id="foto" />
 
-      <button onclick="previewCard()">Preview Kartu</button>
-    </div>
+     <div class="buttonArea">
 
+<button onclick="previewCard()">Preview Kartu</button>
+
+<button class="helpBtn" onclick="openGuide()">Cara Download</button>
+
+</div>
+
+      
     <div class="preview" id="preview" style="display: none">
       <div class="card" id="card">
 
@@ -71,6 +77,36 @@ Download Kartu Gratis
 </button>
     </div>
 
+
+      <div class="guidePopup" id="guidePopup">
+
+<div class="guideContent">
+
+<h3>Cara Download</h3>
+
+<p>
+Ikuti langkah Download:
+  <br>1. GetLink
+  <br>2. Pilih Watch Ads
+  <br>3. Klik Continou
+  <br>4. Klik Skip Ads 3x @ 1 Detik
+  <br>5. Open
+  <br>6. Kartu Siap Download
+</p>
+
+<div class="guideImages">
+
+<img src="tipsDOWNLOAD.jpg">
+<img src="tipsDOWNLOAD2.jpg">
+
+</div>
+
+<button onclick="closeGuide()">Tutup</button>
+
+</div>
+
+</div>
+      
     <script src="script.js"></script>
   </body>
 </html>
