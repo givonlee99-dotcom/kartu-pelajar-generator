@@ -91,7 +91,7 @@ const image = canvas.toDataURL("image/png");
 localStorage.setItem("kartuPelajar", image);
 
 /* redirect ke linkvertise */
-window.location.href="https://direct-link.net/1314520/uLLB9w3AhkuM";
+window.location.href="https://link-hub.net/1314520/prpEIO50wHST";
 
 });
 
