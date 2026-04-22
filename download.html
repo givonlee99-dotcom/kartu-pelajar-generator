@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Download Kartu</title>
+</head>
+
+<body style="text-align:center;font-family:Arial">
+
+<h2>Download Kartu Pelajar</h2>
+
+<img id="preview" style="max-width:350px"><br><br>
+
+<a id="downloadBtn">
+<button style="padding:10px 20px;font-size:16px">
+Download Kartu
+</button>
+</a>
+
+<script>
+
+const data = localStorage.getItem("kartuPelajar");
+
+document.getElementById("preview").src=data;
+
+document.getElementById("downloadBtn").href=data;
+
+document.getElementById("downloadBtn").download="kartu-pelajar.png";
+
+</script>
+
+</body>
+</html>
