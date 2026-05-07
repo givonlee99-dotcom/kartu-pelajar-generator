@@ -2,7 +2,6 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Buat Kartu Pelajar</title>
 
     <link rel="stylesheet" href="style.css" />
@@ -18,10 +17,10 @@
       <h2>Pilih Template</h2>
 
       <div class="template">
-        <img src="kartu-template.png" onclick="selectTemplate(this)" />
-        <img src="kartu-template2.png" onclick="selectTemplate(this)" />
-        <img src="kartu-template3.png" onclick="selectTemplate(this)" />
-        <img src="kartu-template4.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template2.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template3.png" onclick="selectTemplate(this)" />
+        <img src="/assets/kartu-template4.png" onclick="selectTemplate(this)" />
       </div>
 
       <input id="sekolah" placeholder="Nama Sekolah" />
@@ -34,20 +33,15 @@
 
       <input id="nama" placeholder="Nama Siswa" />
       <input id="nisn" placeholder="NISN" />
+      <input id="alamatSiswa" placeholder="Alamat Siswa" />
       <input id="masa" placeholder="Berlaku Sampai" />
 
       <label>Foto Siswa</label>
       <input type="file" id="foto" />
 
-     <div class="buttonArea">
+      <button onclick="previewCard()">Preview Kartu</button>
+    </div>
 
-<button onclick="previewCard()">Preview Kartu</button>
-
-<button class="helpBtn" onclick="openGuide()">Cara Download</button>
-
-</div>
-
-      
     <div class="preview" id="preview" style="display: none">
       <div class="card" id="card">
 
@@ -65,7 +59,7 @@
 
 <div id="namaCard" class="nama"></div>
 <div id="nisnCard" class="nisn"></div>
-
+<div id="alamatSiswaCard" class="alamatSiswa"></div>
 <div id="masaCard" class="masa"></div>
 
 <div id="qrCard" class="qr"></div>
@@ -78,36 +72,6 @@ Download Kartu Gratis
 </button>
     </div>
 
-
-      <div class="guidePopup" id="guidePopup">
-
-<div class="guideContent">
-
-<h3>Cara Download</h3>
-
-<p>
-Ikuti langkah Download:
-  <br>1. GetLink
-  <br>2. Pilih Watch Ads
-  <br>3. Klik Continou
-  <br>4. Klik Skip Ads 3x @ 1 Detik
-  <br>5. Open
-  <br>6. Kartu Siap Download
-</p>
-
-<div class="guideImages">
-
-<img src="tipsDOWNLOAD.jpg">
-<img src="tipsDOWNLOAD2.jpg">
-
-</div>
-
-<button onclick="closeGuide()">Tutup</button>
-
-</div>
-
-</div>
-      
     <script src="script.js"></script>
   </body>
 </html>
